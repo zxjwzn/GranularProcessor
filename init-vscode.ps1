@@ -787,13 +787,15 @@ __VS_TARGET__/.vs/
 *.opendb
 *.db
 *.ipch
-./init-vscode.ps1
-
 # -- OS / IDE ------------------------------------------------------------------
 .DS_Store
 Thumbs.db
 *.swp
 *~
+
+# -- Other ----------------------------------------------------------------------
+/init-vscode.ps1
+
 '@
 
     $gitignoreContent = $gitignoreTemplate -replace '__VS_TARGET__', $targetFolder
