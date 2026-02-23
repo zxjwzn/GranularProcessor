@@ -14,7 +14,7 @@
     JUCE 项目根目录（包含 .jucer 文件的目录）。默认为当前目录。
 
 .PARAMETER JuceVersion
-    CI 构建使用的 JUCE 版本 (git tag)。默认为 "8.0.4"。
+    CI 构建使用的 JUCE 版本 (git tag)。默认为 "8.0.12"。
 
 .EXAMPLE
     .\init-vscode.ps1
@@ -24,7 +24,7 @@
 
 param(
     [string]$ProjectDir = (Get-Location).Path,
-    [string]$JuceVersion = "8.0.4"
+    [string]$JuceVersion = "8.0.12"
 )
 
 Set-StrictMode -Version Latest
