@@ -54,6 +54,24 @@ target_sources(GranularProcessor
         Source/PluginProcessor.h
         Source/PluginEditor.cpp
         Source/PluginEditor.h
+        Source/Utils/Constants.h
+        Source/Utils/ParamIDs.h
+        Source/Utils/ParameterLayout.h
+        Source/Utils/ParameterLayout.cpp
+        Source/DSP/CircularBuffer.h
+        Source/DSP/Grain.h
+        Source/DSP/GrainEnvelope.h
+        Source/DSP/GrainPool.h
+        Source/DSP/GrainScheduler.h
+        Source/DSP/GranularEngine.h
+        Source/DSP/LFOModulator.h
+        Source/DSP/PostProcessor.h
+        Source/UI/CustomKnob.h
+        Source/UI/CustomLookAndFeel.h
+        Source/UI/GlowToggleButton.h
+        Source/UI/ParticleVisualizer.h
+        Source/UI/PresetBar.h
+        Source/UI/SectionPanel.h
 )
 
 target_include_directories(GranularProcessor
