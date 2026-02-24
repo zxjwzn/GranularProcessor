@@ -19,7 +19,7 @@ set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>DLL")
 # -- Fetch JUCE ----------------------------------------------------------------
 include(FetchContent)
 
-set(JUCE_GIT_TAG "8.0.4" CACHE STRING "JUCE version (git tag)")
+set(JUCE_GIT_TAG "8.0.12" CACHE STRING "JUCE version (git tag)")
 
 FetchContent_Declare(
     juce
