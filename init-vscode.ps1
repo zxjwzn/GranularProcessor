@@ -516,7 +516,6 @@ $standardJuceModules = @(
 )
 $cmakeModules = $modules | Where-Object { $_ -in $standardJuceModules }
 $cmakeModulesStr = ($cmakeModules | ForEach-Object { "        juce::$_" }) -join "`n"
-$cmakeSourcesStr = ($sourceFiles | ForEach-Object { "        $_" }) -join "`n"
 
 # JUCE 选项 → CMake compile definitions
 $cmakeDefinesList = @()
@@ -579,10 +578,15 @@ juce_add_plugin(__PROJECT_NAME__
 
 juce_generate_juce_header(__PROJECT_NAME__)
 
-# -- Sources -------------------------------------------------------------------
+# -- Sources (auto-glob: no manual updates needed when adding files) -----------
+file(GLOB_RECURSE PLUGIN_SOURCES CONFIGURE_DEPENDS
+    "${CMAKE_CURRENT_SOURCE_DIR}/Source/*.cpp"
+    "${CMAKE_CURRENT_SOURCE_DIR}/Source/*.h"
+)
+
 target_sources(__PROJECT_NAME__
     PRIVATE
-__SOURCES__
+        ${PLUGIN_SOURCES}
 )
 
 target_include_directories(__PROJECT_NAME__
@@ -618,7 +622,6 @@ $cmakeContent = $cmakeTemplate `
     -replace '__MANUFACTURER_CODE__', $pluginManufacturerCode `
     -replace '__PLUGIN_CODE__', $pluginCode `
     -replace '__FORMATS__', $pluginFormatsStr `
-    -replace '__SOURCES__', $cmakeSourcesStr `
     -replace '__DEFINES__', $cmakeDefinesStr `
     -replace '__MODULES__', $cmakeModulesStr
 

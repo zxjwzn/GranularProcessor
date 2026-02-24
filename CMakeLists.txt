@@ -47,31 +47,15 @@ juce_add_plugin(GranularProcessor
 
 juce_generate_juce_header(GranularProcessor)
 
-# -- Sources -------------------------------------------------------------------
+# -- Sources (auto-glob: no manual updates needed when adding files) -----------
+file(GLOB_RECURSE PLUGIN_SOURCES CONFIGURE_DEPENDS
+    "${CMAKE_CURRENT_SOURCE_DIR}/Source/*.cpp"
+    "${CMAKE_CURRENT_SOURCE_DIR}/Source/*.h"
+)
+
 target_sources(GranularProcessor
     PRIVATE
-        Source/PluginProcessor.cpp
-        Source/PluginProcessor.h
-        Source/PluginEditor.cpp
-        Source/PluginEditor.h
-        Source/Utils/Constants.h
-        Source/Utils/ParamIDs.h
-        Source/Utils/ParameterLayout.h
-        Source/Utils/ParameterLayout.cpp
-        Source/DSP/CircularBuffer.h
-        Source/DSP/Grain.h
-        Source/DSP/GrainEnvelope.h
-        Source/DSP/GrainPool.h
-        Source/DSP/GrainScheduler.h
-        Source/DSP/GranularEngine.h
-        Source/DSP/LFOModulator.h
-        Source/DSP/PostProcessor.h
-        Source/UI/CustomKnob.h
-        Source/UI/CustomLookAndFeel.h
-        Source/UI/GlowToggleButton.h
-        Source/UI/ParticleVisualizer.h
-        Source/UI/PresetBar.h
-        Source/UI/SectionPanel.h
+        ${PLUGIN_SOURCES}
 )
 
 target_include_directories(GranularProcessor
