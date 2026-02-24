@@ -6,6 +6,48 @@
               companyCopyright="Zaxpris">
   <MAINGROUP id="IanExT" name="GranularProcessor">
     <GROUP id="{ACF50D5C-DB4B-2732-8542-D579C3415348}" name="Source">
+      <GROUP id="{UTILS-GROUP-0001}" name="Utils">
+        <FILE id="UtilsConst" name="Constants.h" compile="0" resource="0"
+              file="Source/Utils/Constants.h"/>
+        <FILE id="UtilsParam" name="ParamIDs.h" compile="0" resource="0"
+              file="Source/Utils/ParamIDs.h"/>
+        <FILE id="UtilsLayH" name="ParameterLayout.h" compile="0" resource="0"
+              file="Source/Utils/ParameterLayout.h"/>
+        <FILE id="UtilsLayC" name="ParameterLayout.cpp" compile="1" resource="0"
+              file="Source/Utils/ParameterLayout.cpp"/>
+      </GROUP>
+      <GROUP id="{DSP-GROUP-0001}" name="DSP">
+        <FILE id="DSPCircBuf" name="CircularBuffer.h" compile="0" resource="0"
+              file="Source/DSP/CircularBuffer.h"/>
+        <FILE id="DSPGrnEnv" name="GrainEnvelope.h" compile="0" resource="0"
+              file="Source/DSP/GrainEnvelope.h"/>
+        <FILE id="DSPGrain" name="Grain.h" compile="0" resource="0"
+              file="Source/DSP/Grain.h"/>
+        <FILE id="DSPGrnPool" name="GrainPool.h" compile="0" resource="0"
+              file="Source/DSP/GrainPool.h"/>
+        <FILE id="DSPGrnSch" name="GrainScheduler.h" compile="0" resource="0"
+              file="Source/DSP/GrainScheduler.h"/>
+        <FILE id="DSPLfo" name="LFOModulator.h" compile="0" resource="0"
+              file="Source/DSP/LFOModulator.h"/>
+        <FILE id="DSPPost" name="PostProcessor.h" compile="0" resource="0"
+              file="Source/DSP/PostProcessor.h"/>
+        <FILE id="DSPEngine" name="GranularEngine.h" compile="0" resource="0"
+              file="Source/DSP/GranularEngine.h"/>
+      </GROUP>
+      <GROUP id="{UI-GROUP-0001}" name="UI">
+        <FILE id="UILnf" name="CustomLookAndFeel.h" compile="0" resource="0"
+              file="Source/UI/CustomLookAndFeel.h"/>
+        <FILE id="UIKnob" name="CustomKnob.h" compile="0" resource="0"
+              file="Source/UI/CustomKnob.h"/>
+        <FILE id="UIPanel" name="SectionPanel.h" compile="0" resource="0"
+              file="Source/UI/SectionPanel.h"/>
+        <FILE id="UIGlow" name="GlowToggleButton.h" compile="0" resource="0"
+              file="Source/UI/GlowToggleButton.h"/>
+        <FILE id="UIPreset" name="PresetBar.h" compile="0" resource="0"
+              file="Source/UI/PresetBar.h"/>
+        <FILE id="UIViz" name="ParticleVisualizer.h" compile="0" resource="0"
+              file="Source/UI/ParticleVisualizer.h"/>
+      </GROUP>
       <FILE id="LtEkqS" name="PluginProcessor.cpp" compile="1" resource="0"
             file="Source/PluginProcessor.cpp"/>
       <FILE id="TX3bVL" name="PluginProcessor.h" compile="0" resource="0"

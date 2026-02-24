@@ -2,6 +2,15 @@
 
 <Project ToolsVersion="18.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <Filter Include="GranularProcessor\Source\Utils">
+      <UniqueIdentifier>{31BD7006-E75D-4131-21BE-A12BC6CA06A3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GranularProcessor\Source\DSP">
+      <UniqueIdentifier>{13D0412C-A683-CAF1-13E4-D65BE094D537}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GranularProcessor\Source\UI">
+      <UniqueIdentifier>{2831BE2E-8DD8-54D8-3E9B-36EB9FEA2D0A}</UniqueIdentifier>
+    </Filter>
     <Filter Include="GranularProcessor\Source">
       <UniqueIdentifier>{4F277697-E22A-678E-9B3E-D3D3964FAAF5}</UniqueIdentifier>
     </Filter>
@@ -730,6 +739,9 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\Source\Utils\ParameterLayout.cpp">
+      <Filter>GranularProcessor\Source\Utils</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\PluginProcessor.cpp">
       <Filter>GranularProcessor\Source</Filter>
     </ClCompile>
@@ -3834,6 +3846,57 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\Source\Utils\Constants.h">
+      <Filter>GranularProcessor\Source\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Utils\ParamIDs.h">
+      <Filter>GranularProcessor\Source\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Utils\ParameterLayout.h">
+      <Filter>GranularProcessor\Source\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\DSP\CircularBuffer.h">
+      <Filter>GranularProcessor\Source\DSP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\DSP\GrainEnvelope.h">
+      <Filter>GranularProcessor\Source\DSP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\DSP\Grain.h">
+      <Filter>GranularProcessor\Source\DSP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\DSP\GrainPool.h">
+      <Filter>GranularProcessor\Source\DSP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\DSP\GrainScheduler.h">
+      <Filter>GranularProcessor\Source\DSP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\DSP\LFOModulator.h">
+      <Filter>GranularProcessor\Source\DSP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\DSP\PostProcessor.h">
+      <Filter>GranularProcessor\Source\DSP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\DSP\GranularEngine.h">
+      <Filter>GranularProcessor\Source\DSP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\UI\CustomLookAndFeel.h">
+      <Filter>GranularProcessor\Source\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\UI\CustomKnob.h">
+      <Filter>GranularProcessor\Source\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\UI\SectionPanel.h">
+      <Filter>GranularProcessor\Source\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\UI\GlowToggleButton.h">
+      <Filter>GranularProcessor\Source\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\UI\PresetBar.h">
+      <Filter>GranularProcessor\Source\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\UI\ParticleVisualizer.h">
+      <Filter>GranularProcessor\Source\UI</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\PluginProcessor.h">
       <Filter>GranularProcessor\Source</Filter>
     </ClInclude>

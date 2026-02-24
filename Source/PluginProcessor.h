@@ -1,26 +1,22 @@
 /*
   ==============================================================================
-
-    This file contains the basic framework code for a JUCE plugin processor.
-
+    PluginProcessor.h
+    Granular Processor — Ambient Grain Effect Plugin
   ==============================================================================
 */
 
 #pragma once
 
 #include <JuceHeader.h>
+#include "DSP/GranularEngine.h"
+#include "Utils/ParameterLayout.h"
 
-//==============================================================================
-/**
-*/
-class GranularProcessorAudioProcessor  : public juce::AudioProcessor
+class GranularProcessorAudioProcessor : public juce::AudioProcessor
 {
 public:
-    //==============================================================================
     GranularProcessorAudioProcessor();
     ~GranularProcessorAudioProcessor() override;
 
-    //==============================================================================
     void prepareToPlay (double sampleRate, int samplesPerBlock) override;
     void releaseResources() override;
 
@@ -30,11 +26,9 @@ public:
 
     void processBlock (juce::AudioBuffer<float>&, juce::MidiBuffer&) override;
 
-    //==============================================================================
     juce::AudioProcessorEditor* createEditor() override;
     bool hasEditor() const override;
 
-    //==============================================================================
     const juce::String getName() const override;
 
     bool acceptsMidi() const override;
@@ -42,18 +36,21 @@ public:
     bool isMidiEffect() const override;
     double getTailLengthSeconds() const override;
 
-    //==============================================================================
     int getNumPrograms() override;
     int getCurrentProgram() override;
     void setCurrentProgram (int index) override;
     const juce::String getProgramName (int index) override;
     void changeProgramName (int index, const juce::String& newName) override;
 
-    //==============================================================================
     void getStateInformation (juce::MemoryBlock& destData) override;
     void setStateInformation (const void* data, int sizeInBytes) override;
 
+    juce::AudioProcessorValueTreeState& getAPVTS() { return apvts; }
+    GranularEngine& getGranularEngine() { return granularEngine; }
+
 private:
-    //==============================================================================
+    juce::AudioProcessorValueTreeState apvts;
+    GranularEngine granularEngine;
+
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (GranularProcessorAudioProcessor)
 };

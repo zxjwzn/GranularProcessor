@@ -144,6 +144,7 @@
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\Source\Utils\ParameterLayout.cpp"/>
     <ClCompile Include="..\..\Source\PluginProcessor.cpp"/>
     <ClCompile Include="..\..\Source\PluginEditor.cpp"/>
     <ClCompile Include="..\..\..\..\App\modules\juce_animation\animation\juce_Animator.cpp">
@@ -3056,6 +3057,23 @@
     <ClCompile Include="..\..\JuceLibraryCode\include_juce_opengl.cpp"/>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\Source\Utils\Constants.h"/>
+    <ClInclude Include="..\..\Source\Utils\ParamIDs.h"/>
+    <ClInclude Include="..\..\Source\Utils\ParameterLayout.h"/>
+    <ClInclude Include="..\..\Source\DSP\CircularBuffer.h"/>
+    <ClInclude Include="..\..\Source\DSP\GrainEnvelope.h"/>
+    <ClInclude Include="..\..\Source\DSP\Grain.h"/>
+    <ClInclude Include="..\..\Source\DSP\GrainPool.h"/>
+    <ClInclude Include="..\..\Source\DSP\GrainScheduler.h"/>
+    <ClInclude Include="..\..\Source\DSP\LFOModulator.h"/>
+    <ClInclude Include="..\..\Source\DSP\PostProcessor.h"/>
+    <ClInclude Include="..\..\Source\DSP\GranularEngine.h"/>
+    <ClInclude Include="..\..\Source\UI\CustomLookAndFeel.h"/>
+    <ClInclude Include="..\..\Source\UI\CustomKnob.h"/>
+    <ClInclude Include="..\..\Source\UI\SectionPanel.h"/>
+    <ClInclude Include="..\..\Source\UI\GlowToggleButton.h"/>
+    <ClInclude Include="..\..\Source\UI\PresetBar.h"/>
+    <ClInclude Include="..\..\Source\UI\ParticleVisualizer.h"/>
     <ClInclude Include="..\..\Source\PluginProcessor.h"/>
     <ClInclude Include="..\..\Source\PluginEditor.h"/>
     <ClInclude Include="..\..\..\..\App\modules\juce_animation\animation\juce_Animator.h"/>
